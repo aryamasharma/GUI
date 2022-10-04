@@ -13,7 +13,7 @@ my_img4= ImageTk.PhotoImage(Image.open("images/me4.jpg"))
 
 image_list=[my_img1, my_img2,my_img3,my_img4]
 
-my_label = Label(image=my_img1, height=50)
+my_label = Label(image=my_img1, height = 360)
 my_label.grid(row=0, column=0, columnspan=3)
 
 def forward(image_number):
@@ -21,7 +21,7 @@ def forward(image_number):
     global button_front
     global button_back
     my_label.grid_forget()
-    my_label= Label(image=image_list[image_number-1], height=50)
+    my_label= Label(image=image_list[image_number-1],height = 360)
     button_front= Button(root, text=">>", command= lambda: forward(image_number+1))
     button_back= Button(root, text="<<", command= lambda: backwards(image_number-1))
     if int(image_number) == 4:
@@ -39,10 +39,10 @@ def backwards(image_number):
     global button_front
     global button_back
     my_label.grid_forget()
-    my_label= Label(image=image_list[image_number-1], height=60)
+    my_label= Label(image=image_list[image_number-1], height = 360)
     button_front= Button(root, text=">>", command= lambda: forward(image_number+1))
     button_back= Button(root, text="<<", command= lambda: backwards(image_number-1))
-    if int(image_number) == 0:
+    if int(image_number) == 1:
             button_back= Button(root, text="<<", state= DISABLED)
     my_label.grid(row=0, column=0, columnspan=3)
     button_back.grid(row=1, column=0)
