@@ -13,6 +13,8 @@ my_img4= ImageTk.PhotoImage(Image.open("images/me4.jpg"))
 
 image_list=[my_img1, my_img2,my_img3,my_img4]
 
+status= Label(root, text="Image 1 of 4")
+
 my_label = Label(image=my_img1, height = 360)
 my_label.grid(row=0, column=0, columnspan=3)
 
