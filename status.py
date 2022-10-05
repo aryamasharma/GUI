@@ -13,6 +13,7 @@ my_img4= ImageTk.PhotoImage(Image.open("images/me4.jpg"))
 
 image_list=[my_img1, my_img2,my_img3,my_img4]
 
+status= Label(root, text="Image 1 of " + str(len(image_list)))
 
 my_label = Label(image=my_img1, height = 360)
 my_label.grid(row=0, column=0, columnspan=3)
@@ -56,5 +57,5 @@ button_exit= Button(root, text="Exit Program", command = root.quit)
 button_back.grid(row=1, column=0)
 button_front.grid(row=1 , column=2)
 button_exit.grid(row=1 , column=1)
-
+status.grid(row=2, column=0, columnspan=3)
 root.mainloop()
