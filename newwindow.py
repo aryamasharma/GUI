@@ -12,7 +12,7 @@ def open():
  my_img=ImageTk.PhotoImage(Image.open("images.png"))
  my_label= Label(top,image=my_img).pack()
  label.pack()
- btn= Button(top,text="close window", command= top.exit)
+ btn= Button(top,text="close window", command= top.destroy).pack()
 
 btn=Button(root, text="Open second window", command=open).pack()
 root.mainloop()
